@@ -719,7 +719,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="4dB-QX-6Hc">
+                                                        <tableCellView identifier="Cell" id="4dB-QX-6Hc">
                                                             <rect key="frame" x="1" y="1" width="240" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>

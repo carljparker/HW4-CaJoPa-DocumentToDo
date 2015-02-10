@@ -115,6 +115,8 @@ ToDoList *toDoList;
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
+    // For this to work, Table Cell View in Main.storyboard 
+    // must have Identity | Identifier set to "Cell"
     NSTableCellView *cell = [tableView makeViewWithIdentifier:@"Cell" owner:nil];
     
     cell.textField.stringValue = [toDoList itemTitles][row];
