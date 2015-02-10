@@ -8,8 +8,16 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ViewController : NSViewController
+@interface ViewController : NSViewController <NSTextFieldDelegate, NSTableViewDelegate, NSTableViewDataSource>
 
+
+@property (weak) IBOutlet NSButton *addTextAsItem;
+
+@property (weak) IBOutlet NSButton *removeItemWithText;
+
+@property (weak) IBOutlet NSTextField *itemTextField;
+
+@property (weak) IBOutlet NSTableView *itemListTable;
 
 @end
 
