@@ -119,6 +119,8 @@ ToDoList *toDoList;
     // must have Identity | Identifier set to "Cell"
     NSTableCellView *cell = [tableView makeViewWithIdentifier:@"Cell" owner:nil];
     
+    NSLog(@"%@", [toDoList itemTitles][row]);
+    
     cell.textField.stringValue = [toDoList itemTitles][row];
     return cell;
 }
