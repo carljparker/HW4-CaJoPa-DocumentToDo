@@ -680,7 +680,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
-                                    <action selector="addOnTextFieldReturn:" target="5gI-5U-AMq" id="jEX-DM-pUC"/>
+                                    <action selector="addTextOnReturn:" target="5gI-5U-AMq" id="umz-lT-HZW"/>
                                 </connections>
                             </textField>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i4q-Yr-HES">
@@ -768,6 +768,9 @@
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <action selector="addOnTextFieldReturn:" target="5gI-5U-AMq" id="AYF-IZ-TKt"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <constraints>
