@@ -23,7 +23,7 @@
 //-(void)followUserWithUUID:(NSUUID*)uuid;
 //
 
-@interface ToDoItem : NSObject
+@interface ToDoItem : NSObject <NSCoding>
 
 // properties
 @property (strong, nonatomic) NSString* title;
