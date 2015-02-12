@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		873B10F21A89A18F004D53CA /* ToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 873B10EE1A89A18F004D53CA /* ToDoItem.m */; };
+		873B10F31A89A18F004D53CA /* ToDoList.m in Sources */ = {isa = PBXBuildFile; fileRef = 873B10F11A89A18F004D53CA /* ToDoList.m */; };
 		87A7418C1A8906E600669846 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A7418B1A8906E600669846 /* AppDelegate.m */; };
 		87A7418E1A8906E600669846 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A7418D1A8906E600669846 /* main.m */; };
 		87A741911A8906E600669846 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A741901A8906E600669846 /* ViewController.m */; };
@@ -27,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		873B10EE1A89A18F004D53CA /* ToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoItem.m; sourceTree = "<group>"; };
+		873B10EF1A89A18F004D53CA /* ToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoItem.h; sourceTree = "<group>"; };
+		873B10F01A89A18F004D53CA /* ToDoList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoList.h; sourceTree = "<group>"; };
+		873B10F11A89A18F004D53CA /* ToDoList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoList.m; sourceTree = "<group>"; };
 		87A741851A8906E500669846 /* CaJoPaToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaJoPaToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A741891A8906E500669846 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87A7418A1A8906E600669846 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,6 +67,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		873B10F41A89A19C004D53CA /* ToDoTech */ = {
+			isa = PBXGroup;
+			children = (
+				873B10EE1A89A18F004D53CA /* ToDoItem.m */,
+				873B10EF1A89A18F004D53CA /* ToDoItem.h */,
+				873B10F01A89A18F004D53CA /* ToDoList.h */,
+				873B10F11A89A18F004D53CA /* ToDoList.m */,
+			);
+			name = ToDoTech;
+			sourceTree = "<group>";
+		};
 		87A7417C1A8906E500669846 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +105,7 @@
 				87A741901A8906E600669846 /* ViewController.m */,
 				87A741921A8906E600669846 /* Document.h */,
 				87A741931A8906E600669846 /* Document.m */,
+				873B10F41A89A19C004D53CA /* ToDoTech */,
 				87A741951A8906E600669846 /* Images.xcassets */,
 				87A741971A8906E600669846 /* Main.storyboard */,
 				87A741881A8906E500669846 /* Supporting Files */,
@@ -221,7 +239,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				87A741941A8906E600669846 /* Document.m in Sources */,
+				873B10F21A89A18F004D53CA /* ToDoItem.m in Sources */,
 				87A741911A8906E600669846 /* ViewController.m in Sources */,
+				873B10F31A89A18F004D53CA /* ToDoList.m in Sources */,
 				87A7418E1A8906E600669846 /* main.m in Sources */,
 				87A7418C1A8906E600669846 /* AppDelegate.m in Sources */,
 			);
@@ -410,6 +430,7 @@
 				87A741AA1A8906E600669846 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		87A741AB1A8906E600669846 /* Build configuration list for PBXNativeTarget "CaJoPaToDoTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +439,7 @@
 				87A741AD1A8906E600669846 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
