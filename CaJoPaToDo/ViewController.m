@@ -67,7 +67,6 @@ ToDoList *toDoList;
     
 }
 
-
 - (IBAction)addItemButton:(id)sender {
     
     // add the item
@@ -87,10 +86,10 @@ ToDoList *toDoList;
     // then return won't do anything either
     if (self.addTextAsItem.enabled) {
         [self addItemButton:sender];
+        NSLog(@"Add an item by pressing return in text field.");
     }
     
 }
-
 
 - (IBAction)removeItemButton:(id)sender {
     
