@@ -13,7 +13,7 @@
 
 #import "ToDoItem.h"
 
-@interface ToDoList : NSObject
+@interface ToDoList : NSObject <NSCoding>
 
 // properties
 @property (readwrite, assign) BOOL duplicatesOK;

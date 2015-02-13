@@ -7,9 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ToDoList.h"
 
 @interface ViewController : NSViewController <NSTextFieldDelegate, NSTableViewDelegate, NSTableViewDataSource>
 
+@property (strong) ToDoList *toDoList;
 
 @property (weak) IBOutlet NSButton *addTextAsItem;
 

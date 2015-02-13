@@ -7,10 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "ToDoList.h"
 
 @implementation ViewController
 
+// ToDoList *toDoList;
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
@@ -32,13 +32,9 @@
     self.addTextAsItem.enabled = NO;
     self.removeItemWithText.enabled = NO;
     
-    //instantiate the To Do List object
-    toDoList = [ToDoList groceryList];
-    toDoList.duplicatesOK = YES;
     
 }
 
-ToDoList *toDoList;
 
 
 -(void) controlTextDidChange:(NSNotification *)obj {
@@ -47,9 +43,9 @@ ToDoList *toDoList;
     
     // Only enable the add button if constraints are met
     if ( fieldContents ) {
-        if ( toDoList.duplicatesOK ) {
+        if ( self.toDoList.duplicatesOK ) {
             self.addTextAsItem.enabled = YES;
-        } else if ( ! [toDoList hasItemWithTitle:fieldContents] ) {
+        } else if ( ! [ self.toDoList hasItemWithTitle:fieldContents] ) {
             self.addTextAsItem.enabled = YES;
         } else {
             self.addTextAsItem.enabled = NO;
@@ -57,7 +53,7 @@ ToDoList *toDoList;
     }
     
     // enable remove button if the text matches something in the list
-    if ( [toDoList hasItemWithTitle:fieldContents] ) {
+    if ( [self.toDoList hasItemWithTitle:fieldContents] ) {
         self.removeItemWithText.enabled = YES;
     }
     else {
@@ -70,7 +66,7 @@ ToDoList *toDoList;
 - (IBAction)addItemButton:(id)sender {
     
     // add the item
-    [toDoList addItemWithTitle:self.itemTextField.stringValue];
+    [self.toDoList addItemWithTitle:self.itemTextField.stringValue];
     
     // reset the text field and add button
     // and redraw the table
@@ -94,7 +90,7 @@ ToDoList *toDoList;
 - (IBAction)removeItemButton:(id)sender {
     
     // remove the item
-    [toDoList removeItemWithTitle:self.itemTextField.stringValue];
+    [self.toDoList removeItemWithTitle:self.itemTextField.stringValue];
     
     // reset the text field and add button
     // and redraw the table
@@ -118,19 +114,19 @@ ToDoList *toDoList;
     // must have Identity | Identifier set to "Cell"
     NSTableCellView *cell = [tableView makeViewWithIdentifier:@"Cell" owner:nil];
     
-    NSLog(@"%@", [toDoList itemTitles][row]);
+    NSLog(@"%@", [self.toDoList itemTitles][row]);
     
-    cell.textField.stringValue = [toDoList itemTitles][row];
+    cell.textField.stringValue = [self.toDoList itemTitles][row];
     return cell;
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
 {
-    return [toDoList itemCount];
+    return [self.toDoList itemCount];
 }
 
 - (IBAction)setDups:(id)sender {
-    toDoList.duplicatesOK = ! toDoList.duplicatesOK;
+    self.toDoList.duplicatesOK = ! self.toDoList.duplicatesOK;
     
     // Ugh. Reproducing this block of code from
     // controlTextDidChange
@@ -138,9 +134,9 @@ ToDoList *toDoList;
     
     // Only enable the add button if constraints are met
     if ( fieldContents ) {
-        if ( toDoList.duplicatesOK ) {
+        if ( self.toDoList.duplicatesOK ) {
             self.addTextAsItem.enabled = YES;
-        } else if ( ! [toDoList hasItemWithTitle:fieldContents] ) {
+        } else if ( ! [self.toDoList hasItemWithTitle:fieldContents] ) {
             self.addTextAsItem.enabled = YES;
         } else {
             self.addTextAsItem.enabled = NO;

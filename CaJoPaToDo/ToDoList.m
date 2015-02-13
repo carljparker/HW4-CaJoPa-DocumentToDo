@@ -18,6 +18,7 @@
 
 @implementation ToDoList
 
+NSString * const itemListKey = @"itemListKey";
 
 +(instancetype)toDoListWithTitle:(NSString *)title;
 {
@@ -52,6 +53,28 @@
     
     return object;
 }
+
+
+- (void) encodeWithCoder:(NSCoder *) aCoder
+{
+    [aCoder encodeObject:self.theList forKey:itemListKey];
+}
+
+
+-(id) initWithCoder:(NSCoder *)aDecoder
+{
+    // Our super class doesn't implement NSCoding
+    // so we just say `init` here, not `initWithCoder
+    
+    // QUESTION: Why do I need to do this at all?
+    self = [super init];
+    
+    _theList = [aDecoder decodeObjectForKey:itemListKey];
+    
+    return self;
+    
+}
+
 
 
   // create and insert item if OK
