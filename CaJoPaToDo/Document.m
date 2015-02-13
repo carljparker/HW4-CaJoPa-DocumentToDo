@@ -26,6 +26,9 @@
     self = [super init];
     if (self) {
         // Add your subclass-specific initialization here.
+        //instantiate the To Do List object
+        self.toDoList = [ToDoList groceryList];
+        self.toDoList.duplicatesOK = YES;
     }
     return self;
 }
@@ -50,10 +53,6 @@
     
     [self addWindowController:wc];
     
-    //instantiate the To Do List object
-    self.toDoList = [ToDoList groceryList];
-    self.toDoList.duplicatesOK = YES;
-
     if([wc.contentViewController isKindOfClass:[ViewController class]] ) {
         ((ViewController *) wc.contentViewController).toDoList = self.toDoList;
     }
@@ -76,7 +75,8 @@
 
     NSLog(@"%s", __PRETTY_FUNCTION__);
 
-    self.toDoList = [NSUnarchiver unarchiveObjectWithData:data];
+    self.toDoList = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+
     return YES;
     
 }
