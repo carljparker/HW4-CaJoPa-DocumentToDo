@@ -51,7 +51,7 @@ Here are a couple issues that I ran into and how I fixed them.
 
 > **Edit Scheme...** | **Options**
 
-  and setting the following option:
+    and setting the following option:
 
 > **Launch application without state restoration:** YES
 
@@ -71,8 +71,8 @@ Here are a couple issues that I ran into and how I fixed them.
 - I get the following diagnostic in the debug output window, when I
   first start the app. 
 
-    Could not connect action, target class ViewController does not respond
-    to -addTextOnReturn:
+      Could not connect action, target class ViewController does not respond
+      to -addTextOnReturn:
   
   I have not tracked this down; it doesn't _seem_ to obstruct the
   functionality of the app. 
