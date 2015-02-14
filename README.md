@@ -7,9 +7,9 @@ I did not find this HW to be quite as challenging as the previous one
 (HW3). The most challenging thing about this HW was understanding how
 the ToDoList object needed to be shared between the ViewController and
 the NSDocument. Even after I learned that I needed to share the object,
-it was still (completely) unclear to me how to navigate the class
-structure in NSDocument to provide the ViewController a reference to the
-ToDoClass. Here is the crucial code:
+it was still unclear to me how to navigate the class structure in
+NSDocument to provide the ViewController a reference to the ToDoClass.
+Here is the crucial code:
 
     NSStoryboard *sb = [NSStoryboard storyboardWithName:@"Main" bundle:nil];
     NSWindowController *wc = [sb instantiateControllerWithIdentifier:@"Document Window Controller"];
@@ -28,8 +28,8 @@ more legit, now that it can save and load documents.
 Interestingly, I have not found StackOverflow to be very helpful at all
 for the material in this class. The most helpful resources have been
 NSHipster and, actually, the overview material in Apple's docs. Apple's
-reference material is pretty poor. (And I say this as someone who works
-as a technical writer.)
+reference material is poor. (And I say this as someone who works as a
+technical writer.)
 
 
 ## Ask one well-formed question or observation about the app, technologies used, or related topics. ##
@@ -45,7 +45,6 @@ the process for that?
 ### Fixed Issues and How I Fixed Them ###
 
 Here are a couple issues that I ran into and how I fixed them.
-I'm seeing a number of issues with the application.
 
 - Sometimes, the document Windows wouldn't appear when the program
   started. I was able to fix this by going into: 
@@ -59,9 +58,9 @@ I'm seeing a number of issues with the application.
 - Sometimes, the document window would appear, but it wouldn't display
   the contents from the convenience constructor until I added an
   additional item. I was able to fix this by calling the
-  ViewController's UpdateUI method from the NSDocument.
+  ViewController's `UpdateUI` method from the NSDocument.
 
-    [((ViewController *) wc.contentViewController) updateUI];
+      [((ViewController *) wc.contentViewController) updateUI];
 
   Again, the key thing that I learned here was how to navigate the class
   structure from the NSDocument to the ViewController.
