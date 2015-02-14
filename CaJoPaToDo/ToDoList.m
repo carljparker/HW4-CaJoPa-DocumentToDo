@@ -92,6 +92,20 @@ NSString * const itemListKey = @"itemListKey";
     
 }
 
+- (void) replaceItemWithTitle:(NSInteger) idx
+                     newTitle:(NSString *) title {
+    NSUInteger currentCount = [_theList count];
+    
+    ToDoItem * newItem = [ToDoItem toDoItemWithTitle:title];
+    
+    _theList[idx] = newItem;
+     
+    // test
+    NSUInteger newCount = [_theList count];
+    assert( newCount == currentCount );
+    
+}
+
 
 -(void)removeItemWithTitle:(NSString *) title {
     NSUInteger currentCount = [_theList count];

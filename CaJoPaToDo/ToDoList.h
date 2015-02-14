@@ -21,18 +21,20 @@
 
 // methods
 
-+(instancetype) toDoListWithTitle:(NSString *)title;
-+(instancetype) groceryList;
-+(instancetype) burningManList;
++ (instancetype) toDoListWithTitle:(NSString *)title;
++ (instancetype) groceryList;
++ (instancetype) burningManList;
 
 
--(void) addItemWithTitle:(NSString *)title; // create and insert item if OK
--(void) removeItemWithTitle:(NSString *) title;
--(BOOL) hasItemWithTitle:(NSString*)title; // check if any item contained already has same title
+- (void) addItemWithTitle:(NSString *)title; // create and insert item if OK
+- (void) replaceItemWithTitle:(NSInteger) idx
+                     newTitle:(NSString *) title;
+- (void) removeItemWithTitle:(NSString *) title;
+- (BOOL) hasItemWithTitle:(NSString*)title; // check if any item contained already has same title
 
--(NSArray *) itemTitles;  // an array of all item titles (NSString*)
--(NSArray *) allItems;    // an array of all items
--(NSUInteger) itemCount; // number of items contained in list
+- (NSArray *) itemTitles;  // an array of all item titles (NSString*)
+- (NSArray *) allItems;    // an array of all items
+- (NSUInteger) itemCount; // number of items contained in list
 
 @end
 

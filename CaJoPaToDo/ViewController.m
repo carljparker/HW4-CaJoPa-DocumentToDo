@@ -91,9 +91,18 @@
 
 - (IBAction)addItemButton:(id)sender {
     
-    // add the item
-    [self.toDoList addItemWithTitle:self.itemTextField.stringValue];
-    
+    NSIndexSet * idxSet = [self.itemListTable selectedRowIndexes];
+
+    if ( idxSet.count == 0 ) {
+        // add the item
+        [self.toDoList addItemWithTitle:self.itemTextField.stringValue];
+    }
+    else if ( idxSet.count == 1 ) {
+        // replace the item
+        [self.toDoList replaceItemWithTitle:idxSet.firstIndex newTitle:self.itemTextField.stringValue];
+       
+    }
+
     // reset the text field and add button
     // and redraw the table
     [self updateUI];
