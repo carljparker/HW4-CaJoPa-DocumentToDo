@@ -55,10 +55,9 @@
     
     if([wc.contentViewController isKindOfClass:[ViewController class]] ) {
         ((ViewController *) wc.contentViewController).toDoList = self.toDoList;
+        [((ViewController *) wc.contentViewController) updateUI];
     }
 
-
-//    [self addWindowController:[[NSStoryboard storyboardWithName:@"Main" bundle:nil] instantiateControllerWithIdentifier:@"Document Window Controller"]];
 }
 
 // see 28:00 in the video from class

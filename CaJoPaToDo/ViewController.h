@@ -21,5 +21,7 @@
 
 @property (weak) IBOutlet NSTableView *itemListTable;
 
+- (void) updateUI;
+
 @end
 
