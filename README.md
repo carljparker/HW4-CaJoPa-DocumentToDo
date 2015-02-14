@@ -51,7 +51,7 @@ Here are a couple issues that I ran into and how I fixed them.
 
 > **Edit Scheme...** | **Options**
 
-    and setting the following option:
+  and setting the following option:
 
 > **Launch application without state restoration:** YES
 
