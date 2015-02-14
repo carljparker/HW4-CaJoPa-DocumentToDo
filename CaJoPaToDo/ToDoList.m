@@ -110,9 +110,6 @@ NSString * const itemListKey = @"itemListKey";
 -(void)removeItemWithTitle:(NSString *) title {
     NSUInteger currentCount = [_theList count];
     
-    // yes, this will remove all items in the list that
-    // match the specified title . . . by design.
-    
     // This approach is necessary because you can't change
     // the mutable array while you are enumerating it.
     NSMutableArray * removeList = [NSMutableArray new];
@@ -121,6 +118,7 @@ NSString * const itemListKey = @"itemListKey";
     for (id item in _theList) {
         if ( [[item title] isEqualToString:title] ) {
             [removeList addObject:item];
+            break;
         }
     }
     
