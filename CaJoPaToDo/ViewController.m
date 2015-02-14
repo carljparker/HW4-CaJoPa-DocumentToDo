@@ -63,6 +63,23 @@
     
 }
 
+- (void) tableViewSelectionDidChange:(NSNotification *)notification {
+    
+    NSIndexSet * idxSet = [self.itemListTable selectedRowIndexes];
+    
+    if ( idxSet.count == 0 ) {
+        NSLog(@"Rows selected: Zero");
+    }
+    else if ( idxSet.count == 1 ) {
+        NSLog(@"Rows selected: One");
+    }
+    else {
+        NSLog(@"Rows selected: Multiple");
+    }
+    
+    
+}
+
 - (IBAction)addItemButton:(id)sender {
     
     // add the item
