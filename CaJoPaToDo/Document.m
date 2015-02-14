@@ -42,6 +42,7 @@
     return YES;
 }
 
+
 - (void)makeWindowControllers {
     // Override to return the Storyboard file name of the document.
 
@@ -59,6 +60,7 @@
     }
 
 }
+
 
 // see 28:00 in the video from class
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError {
