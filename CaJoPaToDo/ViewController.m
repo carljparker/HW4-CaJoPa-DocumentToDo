@@ -75,6 +75,10 @@
     }
     else {
         NSLog(@"Rows selected: Multiple");
+        
+        [idxSet enumerateIndexesUsingBlock: ^(NSUInteger idx, BOOL *stop) {
+            NSLog(@"%@", [self.toDoList itemTitles][idx]);
+        }];
     }
     
     
