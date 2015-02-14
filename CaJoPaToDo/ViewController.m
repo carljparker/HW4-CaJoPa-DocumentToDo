@@ -76,6 +76,7 @@
         NSLog(@"%@", [self.toDoList itemTitles][idxSet.firstIndex]);
         
         self.itemTextField.stringValue = [self.toDoList itemTitles][idxSet.firstIndex];
+        self.removeItemWithText.enabled = YES;
         
     }
     else {
@@ -84,6 +85,13 @@
         [idxSet enumerateIndexesUsingBlock: ^(NSUInteger idx, BOOL *stop) {
             NSLog(@"%@", [self.toDoList itemTitles][idx]);
         }];
+        
+        // in multiselect state,
+        // not much is allowed
+        self.itemTextField.stringValue = @"";
+        self.addTextAsItem.enabled = NO;
+        self.removeItemWithText.enabled = NO;
+
     }
     
     
