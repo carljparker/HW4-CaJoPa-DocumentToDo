@@ -69,9 +69,14 @@
     
     if ( idxSet.count == 0 ) {
         NSLog(@"Rows selected: Zero");
+        [self updateUI];
     }
     else if ( idxSet.count == 1 ) {
         NSLog(@"Rows selected: One");
+        NSLog(@"%@", [self.toDoList itemTitles][idxSet.firstIndex]);
+        
+        self.itemTextField.stringValue = [self.toDoList itemTitles][idxSet.firstIndex];
+        
     }
     else {
         NSLog(@"Rows selected: Multiple");
